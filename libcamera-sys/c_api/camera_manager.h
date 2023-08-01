@@ -12,13 +12,7 @@
 typedef libcamera::CameraManager libcamera_camera_manager_t;
 typedef std::vector<std::shared_ptr<libcamera::Camera>> libcamera_camera_list_t;
 
-extern "C" {
-#else
-typedef struct libcamera_camera_manager_t libcamera_camera_manager_t;
-typedef struct libcamera_camera_list_t libcamera_camera_list_t;
-#endif
-
-libcamera_camera_manager_t *libcamera_camera_manager_create();
+extern "C" { mera_camera_manager_create();
 void libcamera_camera_manager_destroy(libcamera_camera_manager_t *mgr);
 int libcamera_camera_manager_start(libcamera_camera_manager_t *mgr);
 void libcamera_camera_manager_stop(libcamera_camera_manager_t *mgr);
